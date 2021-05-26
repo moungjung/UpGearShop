@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpGearShop", "UpGearShop\UpGearShop.csproj", "{7DA702D1-77FE-4C9E-94DF-47711124426C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DA702D1-77FE-4C9E-94DF-47711124426C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DA702D1-77FE-4C9E-94DF-47711124426C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DA702D1-77FE-4C9E-94DF-47711124426C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DA702D1-77FE-4C9E-94DF-47711124426C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C559B4C9-72A5-401A-B55E-6B22851A6516}
+	EndGlobalSection
+EndGlobal
