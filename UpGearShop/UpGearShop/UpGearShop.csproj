@@ -950,5 +950,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\revolution\" />
+    <Folder Include="Views\ShopPages\" />
   </ItemGroup>
 </Project>
