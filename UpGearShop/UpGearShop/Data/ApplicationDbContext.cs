@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using UpGearShop.Areas.Products;
 
 namespace UpGearShop.Data
 {
@@ -12,5 +13,6 @@ namespace UpGearShop.Data
             : base(options)
         {
         }
+        public DbSet<Shoes> Shoes { get; set; }
     }
 }
