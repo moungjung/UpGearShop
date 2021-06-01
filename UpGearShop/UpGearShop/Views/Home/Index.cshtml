@@ -5,13 +5,6 @@
 @model IEnumerable<UpGearShop.Models.Product>
 
 <body>
-    <div>
-        @foreach (var product in Model)
-        {
-            <h3>@product.Id</h3>
-            <h3>@product.Name</h3>
-        }
-    </div>
     <!--<div id="preloader">
         <div id="preloader-inner"></div>
     </div>--><!--/preloader-->
@@ -275,90 +268,22 @@
             <h3>New Arrivals</h3>
         </div>
         <div class="row">
-            <div class="col-md-6 col-lg-3 mb40">
-                <a href="#" class="simple-hover">
-                    <img src="images/shop/p1.jpg" alt="" class="img-fluid">
-                </a>
-                <div class="clearfix product-meta">
+            @foreach (var product in Model)
+            {
+                <div class="col-md-6 col-lg-3 mb40">
+                    <a href="#" class="simple-hover">
+                        <img src="~/images/girl.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="clearfix product-meta">
 
-                    <p class="lead mb0"><a href="#">Women Bags</a></p>
-                    <h4 class=""> $9.99</h4>
+                        <p class="lead mb0"><a href="#">@product.Name</a></p>
+                        <h4 class=""> $@product.Price</h4>
+                    </div>
                 </div>
-            </div><!--/col-->
-            <div class="col-md-6 col-lg-3 mb40">
-                <a href="#" class="simple-hover">
-                    <img src="images/shop/p2.jpg" alt="" class="img-fluid">
-                </a>
-                <div class="clearfix product-meta">
+            }
 
-                    <p class="lead mb0"><a href="#">Women Tops</a></p>
-                    <h4 class=""> $25.00</h4>
-                </div>
-            </div><!--/col-->
-            <div class="col-md-6 col-lg-3 mb40">
-                <a href="#" class="simple-hover">
-                    <img src="images/shop/p3.jpg" alt="" class="img-fluid">
-                </a>
-                <div class="clearfix product-meta">
 
-                    <p class="lead mb0"><a href="#">Winter rounded t-shirts</a></p>
-                    <h4 class=""><del>29.00</del> $9.99</h4>
-                </div>
-            </div><!--/col-->
-            <div class="col-md-6 col-lg-3 mb40">
-                <a href="#" class="simple-hover">
-                    <img src="images/shop/p4.jpg" alt="" class="img-fluid">
-                </a>
-                <div class="clearfix product-meta">
-
-                    <p class="lead mb0"><a href="#">Women sandals</a></p>
-                    <h4 class=""> $21.00</h4>
-                </div>
-            </div><!--/col-->
         </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-3 mb40">
-                <a href="#" class="simple-hover">
-                    <img src="images/shop/p5.jpg" alt="" class="img-fluid">
-                </a>
-                <div class="clearfix product-meta">
-
-                    <p class="lead mb0"><a href="#">Men Jeans</a></p>
-                    <h4 class=""><del>29.00</del>  $7.0</h4>
-                </div>
-            </div><!--/col-->
-            <div class="col-md-6 col-lg-3 mb40">
-                <a href="#" class="simple-hover">
-                    <img src="images/shop/p6.jpg" alt="" class="img-fluid">
-                </a>
-                <div class="clearfix product-meta">
-
-                    <p class="lead mb0"><a href="#">Winter T-shirts</a></p>
-                    <h4 class=""> $25.00</h4>
-                </div>
-            </div><!--/col-->
-            <div class="col-md-6 col-lg-3 mb40">
-                <a href="#" class="simple-hover">
-                    <img src="images/shop/p7.jpg" alt="" class="img-fluid">
-                </a>
-                <div class="clearfix product-meta">
-
-                    <p class="lead mb0"><a href="#">Rounded t-shirts</a></p>
-                    <h4 class=""><del>29.00</del> $9.99</h4>
-                </div>
-            </div><!--/col-->
-            <div class="col-md-6 col-lg-3 mb40">
-                <a href="#" class="simple-hover">
-                    <img src="images/shop/p8.jpg" alt="" class="img-fluid">
-                </a>
-                <div class="clearfix product-meta">
-
-                    <p class="lead mb0"><a href="#">Women T-shirts</a></p>
-                    <h4 class=""> $21.00</h4>
-                </div>
-            </div><!--/col-->
-        </div>
-    </div>
 
     <div class='bg-faded'>
         <div class='container pt100 pb60'>
