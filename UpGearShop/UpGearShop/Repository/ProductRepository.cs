@@ -27,7 +27,8 @@ namespace UpGearShop.Repository
                       Id = product.Id,
                       Name = product.Name,
                       Price = product.Price,
-                      NewProduct = product.NewProduct
+                      NewProduct = product.NewProduct,
+                      imageURL = product.imageURL
                   }).ToListAsync();
         }
 

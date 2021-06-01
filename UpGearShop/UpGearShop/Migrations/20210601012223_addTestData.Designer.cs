@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UpGearShop.Data;
 
 namespace UpGearShop.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210601012223_addTestData")]
+    partial class addTestData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,64 +70,56 @@ namespace UpGearShop.Migrations
                             Id = 1,
                             Name = "Coco",
                             NewProduct = true,
-                            Price = 23m,
-                            imageURL = "/images/products-images/dryGinHat.jpg"
+                            Price = 23m
                         },
                         new
                         {
                             Id = 2,
                             Name = "Hunger",
                             NewProduct = true,
-                            Price = 23m,
-                            imageURL = "/images/products-images/jacketUgly.jpg"
+                            Price = 23m
                         },
                         new
                         {
                             Id = 3,
                             Name = "Yeezys",
                             NewProduct = false,
-                            Price = 12.99m,
-                            imageURL = "/images/products-images/uglyShoes.jpg"
+                            Price = 12.99m
                         },
                         new
                         {
                             Id = 4,
                             Name = "Hunger",
                             NewProduct = true,
-                            Price = 23m,
-                            imageURL = "/images/products-images/womanRedDress.jpg"
+                            Price = 23m
                         },
                         new
                         {
                             Id = 5,
                             Name = "CCIV",
                             NewProduct = false,
-                            Price = 43.99m,
-                            imageURL = "/images/products-images/yeezys.jpg"
+                            Price = 43.99m
                         },
                         new
                         {
                             Id = 6,
                             Name = "Hunger",
                             NewProduct = true,
-                            Price = 23m,
-                            imageURL = "/images/products-images/yeezys2.jpg"
+                            Price = 23m
                         },
                         new
                         {
                             Id = 7,
                             Name = "Hunger",
                             NewProduct = false,
-                            Price = 23m,
-                            imageURL = "/images/products-images/yeezys3.jpg"
+                            Price = 23m
                         },
                         new
                         {
                             Id = 8,
                             Name = "Jordans",
                             NewProduct = true,
-                            Price = 13.99m,
-                            imageURL = "/images/joe.jpg"
+                            Price = 13.99m
                         });
                 });
 

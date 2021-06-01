@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UpGearShop.Data;
 
 namespace UpGearShop.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210601012642_addedTestData")]
+    partial class addedTestData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,7 +71,7 @@ namespace UpGearShop.Migrations
                             Name = "Coco",
                             NewProduct = true,
                             Price = 23m,
-                            imageURL = "/images/products-images/dryGinHat.jpg"
+                            imageURL = "~/images/products-images/dryGinHat.jpg"
                         },
                         new
                         {
@@ -77,7 +79,7 @@ namespace UpGearShop.Migrations
                             Name = "Hunger",
                             NewProduct = true,
                             Price = 23m,
-                            imageURL = "/images/products-images/jacketUgly.jpg"
+                            imageURL = "~/images/products-images/jacketUgly.jpg"
                         },
                         new
                         {
@@ -85,7 +87,7 @@ namespace UpGearShop.Migrations
                             Name = "Yeezys",
                             NewProduct = false,
                             Price = 12.99m,
-                            imageURL = "/images/products-images/uglyShoes.jpg"
+                            imageURL = "~/images/products-images/uglyShoes.jpg"
                         },
                         new
                         {
@@ -93,7 +95,7 @@ namespace UpGearShop.Migrations
                             Name = "Hunger",
                             NewProduct = true,
                             Price = 23m,
-                            imageURL = "/images/products-images/womanRedDress.jpg"
+                            imageURL = "~/images/products-images/womanRedDress.jpg"
                         },
                         new
                         {
@@ -101,7 +103,7 @@ namespace UpGearShop.Migrations
                             Name = "CCIV",
                             NewProduct = false,
                             Price = 43.99m,
-                            imageURL = "/images/products-images/yeezys.jpg"
+                            imageURL = "~/images/products-images/yeezys"
                         },
                         new
                         {
@@ -109,7 +111,7 @@ namespace UpGearShop.Migrations
                             Name = "Hunger",
                             NewProduct = true,
                             Price = 23m,
-                            imageURL = "/images/products-images/yeezys2.jpg"
+                            imageURL = "~/images/products-images/yeezys2"
                         },
                         new
                         {
@@ -117,7 +119,7 @@ namespace UpGearShop.Migrations
                             Name = "Hunger",
                             NewProduct = false,
                             Price = 23m,
-                            imageURL = "/images/products-images/yeezys3.jpg"
+                            imageURL = "~/images/products-images/yeezys3"
                         },
                         new
                         {
@@ -125,7 +127,7 @@ namespace UpGearShop.Migrations
                             Name = "Jordans",
                             NewProduct = true,
                             Price = 13.99m,
-                            imageURL = "/images/joe.jpg"
+                            imageURL = "~/images/joe.jpg"
                         });
                 });
 

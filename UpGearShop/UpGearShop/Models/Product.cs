@@ -16,6 +16,6 @@ namespace UpGearShop.Models
         //public int CategoryId { get; set; }
 
         //public string CategoryName { get; set; }
-        //public string imageUrl { get; set; }
+        public string imageURL { get; set; }
     }
 }
