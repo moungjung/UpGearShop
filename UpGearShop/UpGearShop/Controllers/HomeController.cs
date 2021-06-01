@@ -3,25 +3,44 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using UpGearShop.Models;
+using UpGearShop.Repository;
 
 namespace UpGearShop.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        //private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IProductRepository _productRepository = null;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+
+        public HomeController(IProductRepository bookRepository,
+            IWebHostEnvironment webHostEnvironment)
         {
-            _logger = logger;
+            _productRepository = bookRepository;
+            _webHostEnvironment = webHostEnvironment;
         }
 
-        public IActionResult Index()
+        public async Task<ViewResult> Index()
         {
-            return View();
+            var data = await _productRepository.GetAllProduct();
+
+            return View(data);
         }
+
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+        //    _logger = logger;
+        //}
+
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
 
         public IActionResult Privacy()
         {

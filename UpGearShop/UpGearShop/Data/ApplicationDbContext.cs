@@ -21,14 +21,14 @@ namespace UpGearShop.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.Entity<Product>().HasData(new { Id = 1, Name = "Coco",  Price=(decimal)23});
-            builder.Entity<Product>().HasData(new { Id = 2, Name = "Hunger", Price = (decimal)23 });
-            builder.Entity<Product>().HasData(new { Id = 3, Name = "Yeezys", Price = (decimal)12.99 });
-            builder.Entity<Product>().HasData(new { Id = 4, Name = "Hunger", Price = (decimal)23 });
-            builder.Entity<Product>().HasData(new { Id = 5, Name = "CCIV", Price = (decimal)43.99 });
-            builder.Entity<Product>().HasData(new { Id = 6, Name = "Hunger", Price = (decimal)23 });
-            builder.Entity<Product>().HasData(new { Id = 7, Name = "Hunger", Price = (decimal)23 });
-            builder.Entity<Product>().HasData(new { Id = 8, Name = "Jordans", Price = (decimal)13.99 });
+            builder.Entity<Product>().HasData(new { Id = 1, NewProduct = true, Name = "Coco", Price = (decimal)23 }) ;
+            builder.Entity<Product>().HasData(new { Id = 2, NewProduct = true, Name = "Hunger", Price = (decimal)23 });
+            builder.Entity<Product>().HasData(new { Id = 3, NewProduct = false, Name = "Yeezys", Price = (decimal)12.99 });
+            builder.Entity<Product>().HasData(new { Id = 4, NewProduct = true, Name = "Hunger", Price = (decimal)23 });
+            builder.Entity<Product>().HasData(new { Id = 5, NewProduct = false, Name = "CCIV", Price = (decimal)43.99 });
+            builder.Entity<Product>().HasData(new { Id = 6, NewProduct = true, Name = "Hunger", Price = (decimal)23 });
+            builder.Entity<Product>().HasData(new { Id = 7, NewProduct = false, Name = "Hunger", Price = (decimal)23 });
+            builder.Entity<Product>().HasData(new { Id = 8, NewProduct = true, Name = "Jordans", Price = (decimal)13.99 });
         }
     }
 }
