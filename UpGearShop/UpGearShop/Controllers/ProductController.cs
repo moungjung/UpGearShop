@@ -31,5 +31,12 @@ namespace UpGearShop.Controllers
 
             return View(data);
         }
+
+        [Route("Product/{id:int:min(1)}", Name = "productDetailsRoute")]
+        public async Task<ViewResult> GetIndividualProduct(int id)
+        {
+            var data = await _productRepository.GetProductById(id);
+            return View(data);
+        }
     }
 }

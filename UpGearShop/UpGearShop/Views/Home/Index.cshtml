@@ -35,7 +35,7 @@
                          data-paddingright="[0,0,0,0]"
                          data-paddingbottom="[0,0,0,0]"
                          data-paddingleft="[0,0,0,0]"
-                         style="z-index: 7; white-space: nowrap;text-transform:left;">Women's Collection </div>
+                         style="z-index: 7; white-space: nowrap;text-transform:left;">Trending </div>
                     <!-- LAYER NR. 1 -->
                     <div class="tp-caption shop-slider-title   tp-resizeme"
                          id="slide-1706-layer-2"
@@ -271,7 +271,7 @@
             @foreach (var product in Model)
             {
                 <div class="col-md-6 col-lg-3 mb40">
-                    <a href="#" class="simple-hover">
+                    <a asp-controller="Product" asp-action="GetIndividualProduct" asp-route-id="@product.Id" class="simple-hover">
                         <img src="@product.imageURL" alt="" class="img-fluid">
                     </a>
                     <div class="clearfix product-meta">

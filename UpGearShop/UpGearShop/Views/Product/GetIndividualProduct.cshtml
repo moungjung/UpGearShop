@@ -1,0 +1,416 @@
+﻿@*@page
+    @model UpGearShop.Views.Product.ProductItemModel
+    @{
+    }*@
+@model Product
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Assan 3</title>
+    <!-- Plugins CSS -->
+    <link href="~/css/plugins/plugins.css" rel="stylesheet">
+    <!-- load css for cubeportfolio -->
+    <link rel="stylesheet" type="text/css" href="~/cubeportfolio/css/cubeportfolio.min.css">
+    <link href='~/smart-form/smart-formsUI.css' rel='stylesheet' />
+    <link href="~/css/shop-style.css" rel="stylesheet">
+</head>
+
+<body>
+    @*<div id="preloader">
+        <div id="preloader-inner"></div>
+    </div>/preloader*@
+
+    <div class="container pt90 pb60">
+        <div class='row align-items-center'>
+            <div class='col-md-7'>
+                <div id="js-grid-slider-thumbnail" class="cbp">
+                    <div class="cbp-item">
+                        <div class="cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img class="image-resize"src="@Model.imageURL" alt="" max-width="992px" max-height="661px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cbp-item">
+                        <div class="cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img class="image-resize" src="@Model.imageURL" alt="" max-width="992px" max-height="661px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cbp-item">
+                        <div class="cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img class="image-resize" src="@Model.imageURL" alt="" max-width="992px" max-height="661px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cbp-item">
+                        <div class="cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img class="image-resize" src="@Model.imageURL" alt="" max-width="992px" max-height="661px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="js-pagination-slider">
+                    <div class="cbp-pagination-item cbp-pagination-active">
+                        <img class="image-resize" src="@Model.imageURL" alt="" max-width="992px" max-height="661px">
+                    </div>
+                    <div class="cbp-pagination-item">
+                        <img class="image-resize" src="@Model.imageURL" alt="" max-width="992px" max-height="661px">
+                    </div>
+                    <div class="cbp-pagination-item">
+                        <img class="image-resize" src="@Model.imageURL" alt="" max-width="992px" max-height="661px">
+                    </div>
+                    <div class="cbp-pagination-item">
+                        <img class="image-resize" src="@Model.imageURL" alt="" max-width="992px" max-height="661px">
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-5'>
+                <h2>@Model.Name</h2>
+                <div class='clearfix mb30'>
+                    <span class='float-right'>
+                        <i class='fa fa-star text-warning'></i>
+                        <i class='fa fa-star text-warning'></i>
+                        <i class='fa fa-star text-warning'></i>
+                        <i class='fa fa-star text-warning'></i>
+                        <i class='fa fa-star-half-full text-warning'></i>
+                        (12 Reviews)
+                    </span>
+                    <h4 class='text-info'>$@Model.Price</h4>
+                </div>
+                <p>
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+                </p>
+                <form method="post" class="pt20">
+                    <h4><small>Quantity</small></h4>
+                    <div class="quantity">
+                        <input type="button" class="minus" value="-">
+                        <input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                        <input type="button" class="plus" value="+">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-icon">Add to cart</button>
+                </form>
+            </div>
+        </div>
+        <div class="row pt70">
+            <div class="col-md-10 ml-auto mr-auto">
+                <div>
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs tabs-default justify-content-center mb30" role="tablist">
+                        <li class="nav-item" role="presentation"><a class="active nav-link" href="#t3" aria-controls="#t3" role="tab" data-toggle="tab"> Description</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#t4" aria-controls="#t4" role="tab" data-toggle="tab"> Additional Information</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#t5" aria-controls="#t5" role="tab" data-toggle="tab"> Feedback <sup>2</sup></a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active show fade" id="t3">
+                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="t4">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            Size:
+                                        </th>
+                                        <td>
+                                            Unique
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Colors
+                                        </th>
+                                        <td>
+                                            Sky Blue, Green, Red
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Material
+                                        </th>
+                                        <td>
+                                            100% Leather
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div role="tabpanel" class="tab-pane show fade" id="t5">
+                            <div class="media mb40">
+                                <i class="d-flex mr-3 fa fa-user-circle-o fa-3x"></i>
+                                <div class="media-body">
+                                    <h5 class="mt-0 clearfix">
+                                        <span class="float-right">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star-half-full  text-warning"></i>
+                                        </span>
+                                        Jane Doe
+                                    </h5>
+                                    Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                </div>
+                            </div>
+                            <div class="media mb40">
+                                <i class="d-flex mr-3 fa fa-user-circle-o fa-3x"></i>
+                                <div class="media-body">
+                                    <h5 class="mt-0 clearfix">
+                                        <span class="float-right">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star-half-full  text-warning"></i>
+                                        </span>
+                                        Jane Doe
+                                    </h5>
+                                    Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                </div>
+                            </div><!--/review-->
+                            <hr class="mb40">
+                            <div class="title-heading1">
+                                <h3>Add Feedback</h3>
+                            </div>
+                            <div class="smart-forms feedback-form smart-container wrap-1">
+
+                                <form method="post" action="/" id="feedback">
+                                    <div class="form-body">
+
+                                        <div class="frm-row">
+
+                                            <div class="section colm colm6">
+                                                <label class="field prepend-icon">
+                                                    <input type="text" name="firstname" id="firstname" class="gui-input" placeholder="First name...">
+                                                    <span class="field-icon"><i class="fa fa-user"></i></span>
+                                                </label>
+                                            </div><!-- end section -->
+
+                                            <div class="section colm colm6">
+                                                <label class="field prepend-icon">
+                                                    <input type="text" name="lastname" id="lastname" class="gui-input" placeholder="Last name...">
+                                                    <span class="field-icon"><i class="fa fa-user"></i></span>
+                                                </label>
+                                            </div><!-- end section -->
+
+                                        </div><!-- end frm-row section -->
+
+                                        <div class="section">
+                                            <label class="field prepend-icon">
+                                                <input type="text" name="company" id="company" class="gui-input" placeholder="Company">
+                                                <span class="field-icon"><i class="fa fa-building-o"></i></span>
+                                            </label>
+                                        </div><!-- end section -->
+
+                                        <div class="section">
+                                            <label class="field prepend-icon">
+                                                <input type="email" name="email" id="email" class="gui-input" placeholder="Email address">
+                                                <span class="field-icon"><i class="fa fa-envelope"></i></span>
+                                            </label>
+                                        </div><!-- end section -->
+
+                                        <div class="section">
+                                            <label class="field prepend-icon">
+                                                <input type="tel" name="mobile" id="mobile" class="gui-input" placeholder="Moble contact">
+                                                <span class="field-icon"><i class="fa fa-phone-square"></i></span>
+                                            </label>
+                                        </div><!-- end section -->
+                                        <div class="section">
+                                            <label class="field prepend-icon">
+                                                <textarea class="gui-textarea" id="comment" name="comment" placeholder="Feedback message"></textarea>
+                                                <span class="field-icon"><i class="fa fa-comments"></i></span>
+                                                <span class="input-hint"> <strong>Hint:</strong> Please enter between 80 - 300 characters.</span>
+                                            </label>
+                                        </div><!-- end section -->
+
+                                        <div class="spacer spacer-b20"></div>
+
+                                        <div class="section">
+
+                                            <span class="rating block">
+
+                                                <span class="lbl-text">Rate this product</span>
+
+                                                <input class="rating-input" id="five-stars" type="radio" name="product-rate">
+                                                <label class="rating-star" for="five-stars"><i class="fa fa-star"></i></label>
+
+                                                <input class="rating-input" id="four-stars" type="radio" name="product-rate">
+                                                <label class="rating-star" for="four-stars"><i class="fa fa-star"></i></label>
+
+                                                <input class="rating-input" id="three-stars" type="radio" name="product-rate" checked>
+                                                <label class="rating-star" for="three-stars"><i class="fa fa-star"></i></label>
+
+                                                <input class="rating-input" id="two-stars" type="radio" name="product-rate">
+                                                <label class="rating-star" for="two-stars"><i class="fa fa-star"></i></label>
+
+                                                <input class="rating-input" id="one-star" type="radio" name="product-rate">
+                                                <label class="rating-star" for="one-star"><i class="fa fa-star"></i></label>
+
+                                            </span>
+
+
+                                        </div><!-- end  section -->
+
+
+                                    </div><!-- end .form-body section -->
+
+                                    <div class='pt20 pb20'>
+                                        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+
+                                    </div>
+                                </form>
+
+                            </div><!-- end .smart-forms section -->
+
+
+                            <div></div><!-- end section -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-faded related-items pt90 pb50">
+        <div class="container">
+            <div class="title-heading1">
+                <h3>You may also like</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb40">
+                    <a href="#" class="simple-hover">
+                        <img src="~/images/shop/p1.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="clearfix product-meta">
+
+                        <p class="lead mb0"><a href="#">Women Bags</a></p>
+                        <h4 class=""> $9.99</h4>
+                    </div>
+                </div><!--/col-->
+                <div class="col-md-6 col-lg-3 mb40">
+                    <a href="#" class="simple-hover">
+                        <img src="~/images/shop/p2.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="clearfix product-meta">
+
+                        <p class="lead mb0"><a href="#">Women Tops</a></p>
+                        <h4 class=""> $25.00</h4>
+                    </div>
+                </div><!--/col-->
+                <div class="col-md-6 col-lg-3 mb40">
+                    <a href="#" class="simple-hover">
+                        <img src="~/images/shop/p3.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="clearfix product-meta">
+
+                        <p class="lead mb0"><a href="#">Winter rounded t-shirts</a></p>
+                        <h4 class=""><del>29.00</del> $9.99</h4>
+                    </div>
+                </div><!--/col-->
+                <div class="col-md-6 col-lg-3 mb40">
+                    <a href="#" class="simple-hover">
+                        <img src="~/images/shop/p4.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="clearfix product-meta">
+
+                        <p class="lead mb0"><a href="#">Women sandals</a></p>
+                        <h4 class=""> $21.00</h4>
+                    </div>
+                </div><!--/col-->
+            </div>
+        </div>
+    </div>
+            <div class="row">
+
+                <div class="col-lg-2 col-md-2 mb40">
+
+                    <ul class="list-unstyled footer-list-item">
+                        <li>
+                            <a href="#">
+                                Jeans
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Wrangler
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Peter England
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                T-shirts
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Party Wear
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Shoes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-2 mb40">
+
+                    <ul class="list-unstyled footer-list-item">
+                        <li>
+                            <a href="#">
+                                Offer & Discounts
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Skirts
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Kids Store
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Home Decor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Sunglasses
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Begs
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                <!--back to top-->
+                <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
+                <!-- jQuery first, then Tether, then Bootstrap JS. -->
+                <script src="~/js/plugins/plugins.js"></script>
+                <script src="~/js/assan.custom.js"></script>
+                <!-- load cubeportfolio -->
+                <script type="text/javascript" src="~/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+                <!-- init cubeportfolio -->
+                <script type="text/javascript" src="~/js/cube-thumb-slider.js"></script>
+</body>
+</html>

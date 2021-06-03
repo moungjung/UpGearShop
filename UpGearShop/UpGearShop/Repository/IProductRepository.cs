@@ -9,5 +9,6 @@ namespace UpGearShop.Repository
     public interface IProductRepository
     {
         Task<List<Product>> GetAllProduct();
+        Task<Product> GetProductById(int id);
     }
 }

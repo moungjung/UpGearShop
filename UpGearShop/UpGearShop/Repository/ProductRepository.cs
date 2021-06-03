@@ -31,6 +31,18 @@ namespace UpGearShop.Repository
                       imageURL = product.imageURL
                   }).ToListAsync();
         }
+        public async Task<Product> GetProductById(int id)
+        {
+            return await _context.Products.Where(x => x.Id == id)
+                 .Select(product => new Product()
+                 {
+                     Name = product.Name,
+                     Price = product.Price,
+                     imageURL = product.imageURL,
+                     Id = product.Id,
+                     NewProduct = product.NewProduct
+                 }).FirstOrDefaultAsync();
+        }
 
     }
 }
