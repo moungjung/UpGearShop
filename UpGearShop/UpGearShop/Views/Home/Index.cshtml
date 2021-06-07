@@ -2,7 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model IEnumerable<UpGearShop.Models.Product>
+@model IList<UpGearShop.Models.Product>
 
 <body>
     <!--<div id="preloader">
@@ -268,16 +268,16 @@
             <h3>New Arrivals</h3>
         </div>
         <div class="row">
-            @foreach (var product in Model)
+            @for(int i = 0; i < 8; i++)
             {
                 <div class="col-md-6 col-lg-3 mb40">
-                    <a asp-controller="Product" asp-action="GetIndividualProduct" asp-route-id="@product.Id" class="simple-hover">
-                        <img src="@product.imageURL" alt="" class="img-fluid">
+                    <a asp-controller="Product" asp-action="GetIndividualProduct" asp-route-id="@Model[i].Id" class="simple-hover">
+                        <img src="@Model[i].imageURL" alt="" class="img-fluid">
                     </a>
                     <div class="clearfix product-meta">
 
-                        <p class="lead mb0"><a href="#">@product.Name</a></p>
-                        <h4 class=""> $@product.Price</h4>
+                        <p class="lead mb0"><a href="#">@Model[i].Name</a></p>
+                        <h4 class=""> $@Model[i].Price</h4>
                     </div>
                 </div>
             }

@@ -1,8 +1,10 @@
-﻿@*@page
-    @model UpGearShop.Views.Product.ProductItemModel
-    @{
-    }*@
+﻿
 @model Product
+@{
+    ViewData["Title"] = @Model.Name;
+}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +22,8 @@
 
 <body>
     @*<div id="preloader">
-        <div id="preloader-inner"></div>
-    </div>/preloader*@
+            <div id="preloader-inner"></div>
+        </div>/preloader*@
 
     <div class="container pt90 pb60">
         <div class='row align-items-center'>
@@ -30,7 +32,7 @@
                     <div class="cbp-item">
                         <div class="cbp-caption">
                             <div class="cbp-caption-defaultWrap">
-                                <img class="image-resize"src="@Model.imageURL" alt="" max-width="992px" max-height="661px">
+                                <img class="image-resize" src="@Model.imageURL" alt="" max-width="992px" max-height="661px">
                             </div>
                         </div>
                     </div>
@@ -207,24 +209,11 @@
 
                                         <div class="section">
                                             <label class="field prepend-icon">
-                                                <input type="text" name="company" id="company" class="gui-input" placeholder="Company">
-                                                <span class="field-icon"><i class="fa fa-building-o"></i></span>
-                                            </label>
-                                        </div><!-- end section -->
-
-                                        <div class="section">
-                                            <label class="field prepend-icon">
                                                 <input type="email" name="email" id="email" class="gui-input" placeholder="Email address">
                                                 <span class="field-icon"><i class="fa fa-envelope"></i></span>
                                             </label>
                                         </div><!-- end section -->
 
-                                        <div class="section">
-                                            <label class="field prepend-icon">
-                                                <input type="tel" name="mobile" id="mobile" class="gui-input" placeholder="Moble contact">
-                                                <span class="field-icon"><i class="fa fa-phone-square"></i></span>
-                                            </label>
-                                        </div><!-- end section -->
                                         <div class="section">
                                             <label class="field prepend-icon">
                                                 <textarea class="gui-textarea" id="comment" name="comment" placeholder="Feedback message"></textarea>
@@ -330,87 +319,87 @@
             </div>
         </div>
     </div>
-            <div class="row">
+    <div class="row">
 
-                <div class="col-lg-2 col-md-2 mb40">
+        <div class="col-lg-2 col-md-2 mb40">
 
-                    <ul class="list-unstyled footer-list-item">
-                        <li>
-                            <a href="#">
-                                Jeans
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Wrangler
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Peter England
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                T-shirts
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Party Wear
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Shoes
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-2 mb40">
+            <ul class="list-unstyled footer-list-item">
+                <li>
+                    <a href="#">
+                        Jeans
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Wrangler
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Peter England
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        T-shirts
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Party Wear
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Shoes
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-2 col-md-2 mb40">
 
-                    <ul class="list-unstyled footer-list-item">
-                        <li>
-                            <a href="#">
-                                Offer & Discounts
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Skirts
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Kids Store
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Home Decor
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Sunglasses
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Begs
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                </div>
-                <!--back to top-->
-                <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
-                <!-- jQuery first, then Tether, then Bootstrap JS. -->
-                <script src="~/js/plugins/plugins.js"></script>
-                <script src="~/js/assan.custom.js"></script>
-                <!-- load cubeportfolio -->
-                <script type="text/javascript" src="~/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
-                <!-- init cubeportfolio -->
-                <script type="text/javascript" src="~/js/cube-thumb-slider.js"></script>
+            <ul class="list-unstyled footer-list-item">
+                <li>
+                    <a href="#">
+                        Offer & Discounts
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Skirts
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Kids Store
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Home Decor
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Sunglasses
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Begs
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--back to top-->
+    <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="~/js/plugins/plugins.js"></script>
+    <script src="~/js/assan.custom.js"></script>
+    <!-- load cubeportfolio -->
+    <script type="text/javascript" src="~/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+    <!-- init cubeportfolio -->
+    <script type="text/javascript" src="~/js/cube-thumb-slider.js"></script>
 </body>
 </html>

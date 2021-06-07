@@ -38,5 +38,7 @@ namespace UpGearShop.Controllers
             var data = await _productRepository.GetProductById(id);
             return View(data);
         }
+
+
     }
 }
