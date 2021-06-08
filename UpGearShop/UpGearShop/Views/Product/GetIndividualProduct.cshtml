@@ -93,14 +93,30 @@
                 <form method="post" class="pt20">
                     <h4><small>Quantity</small></h4>
                     <div class="quantity">
-                        <input type="button" class="minus" value="-">
-                        <input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
-                        <input type="button" class="plus" value="+">
+                        <input type="button" class="minus" value="-" onclick="setQuantityDown()">
+                        <input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1" id="quantity">
+                        <input type="button" class="plus" value="+" onclick="setQuantityUp()">
                     </div>
                     <button type="button" class="btn btn-primary btn-icon">Add to cart</button>
                 </form>
             </div>
         </div>
+        <script>
+            function setQuantityUp() {
+                var results = +document.getElementById('quantity').value + 1;
+                document.getElementById('quantity').value = results;
+            }
+             function setQuantityDown() {
+                 var results = +document.getElementById('quantity').value;
+                 if (results <=1) {
+
+                 }
+                 else {
+                     document.getElementById('quantity').value = results- 1;
+                 }
+                
+            }
+        </script>
         <div class="row pt70">
             <div class="col-md-10 ml-auto mr-auto">
                 <div>

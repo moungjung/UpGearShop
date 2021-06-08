@@ -36,6 +36,7 @@ namespace UpGearShop
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddRazorPages().AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +60,7 @@ namespace UpGearShop
 
             app.UseAuthentication();
             app.UseAuthorization();
+            
 
             app.UseEndpoints(endpoints =>
             {
