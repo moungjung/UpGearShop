@@ -10,5 +10,6 @@ namespace UpGearShop.Repository
     {
         Task<List<Product>> GetAllProduct();
         Task<Product> GetProductById(int id);
+        Task<List<Product>> SearchProducts(string name);
     }
 }

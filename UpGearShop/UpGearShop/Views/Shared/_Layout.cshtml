@@ -119,8 +119,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-faded">
     <div class="search-inline">
-        <form>
-            <input type="text" class="form-control" placeholder="Type and hit enter...">
+        <form asp-controller="Product" asp-action="SearchProducts" asp-route-id="searchCriteria">
+            <input type="text" class="form-control" placeholder="Type and hit enter..." name="searchCriteria">
             <button type="submit"><i class="ti-search"></i></button>
             <a href="javascript:void(0)" class="search-close"><i class="ti-close"></i></a>
         </form>

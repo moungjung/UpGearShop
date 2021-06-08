@@ -44,5 +44,18 @@ namespace UpGearShop.Repository
                  }).FirstOrDefaultAsync();
         }
 
+        public async Task<List<Product>> SearchProducts(string name)
+        {
+            return await _context.Products.Where(x => x.Name.Contains(name))
+                .Select(product => new Product()
+                {
+                    Name = product.Name,
+                    Price = product.Price,
+                    imageURL = product.imageURL,
+                    Id = product.Id,
+                    NewProduct = product.NewProduct
+                }).ToListAsync();
+        }
+
     }
 }

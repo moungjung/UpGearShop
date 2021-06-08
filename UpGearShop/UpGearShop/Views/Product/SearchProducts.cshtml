@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Search";
+}
+@model IList<Product>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Assan 3</title>
+    <!-- Plugins CSS -->
+    <link href="~/css/plugins/plugins.css" rel="stylesheet">
+    <link href="~/css/shop-style.css" rel="stylesheet">
+</head>
+
+<body>
+    @*<div id="preloader">
+        <div id="preloader-inner"></div>
+    </div>*@<!--/preloader-->
+
+    <div class="container pt90 pb60">
+        <div class="title-heading1 mb40">
+            <h2>Shop <small>Showing @Model.Count() Products</small></h2>
+        </div>
+        <div class="row">
+            @foreach(var item in Model)
+            {
+                <div class="col-md-6 col-lg-3 mb40">
+                <a asp-controller="Product" asp-action="GetIndividualProduct" asp-route-id="@item.Id" class="simple-hover">
+                    <img src="@item.imageURL" alt="" class="img-fluid">
+                </a>
+                <div class="clearfix product-meta">
+
+                    <p class="lead mb0"><a href="#">@item.Name</a></p>
+                    <h4 class=""> $@item.Price</h4>
+                </div>
+            </div><!--/col-->
+            }
+            
+        </div>
+        @*Pagination not implemented yet*@
+        @*<nav aria-label="Page navigation example" class="mb20">
+            <ul class="pagination pagination justify-content-end">
+                <li class="page-item "><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>*@
+    </div>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="~/js/plugins/plugins.js"></script>
+    <script src="~/js/assan.custom.js"></script>
+</body>
+</html>
