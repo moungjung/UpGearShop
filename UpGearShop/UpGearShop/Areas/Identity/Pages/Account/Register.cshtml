@@ -2,14 +2,26 @@
 @model RegisterModel
 @{
     ViewData["Title"] = "Register";
-    Layout = "/Views/Shared/_LayoutIdentity.cshtml";
 
 }
 
-<h1>@ViewData["Title"]</h1>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Plugins CSS -->
+    <link href="~/css/plugins/plugins.css" rel="stylesheet">
+    <!-- load css for cubeportfolio -->
+    <link rel="stylesheet" type="text/css" href="~/cubeportfolio/css/cubeportfolio.min.css">
+    <link href='~/smart-form/smart-formsUI.css' rel='stylesheet' />
+    <link href="~/css/shop-style.css" rel="stylesheet">
+</head>
 
-<div class="row">
+
+
+<div class="container pt90 pb60">
     <div class="col-md-4">
+        <h1>@ViewData["Title"]</h1>
         <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
             <h4>Create a new account.</h4>
             <hr />
@@ -33,7 +45,7 @@
         </form>
     </div>
     <div class="col-md-6 col-md-offset-2">
-        <section>
+        <section id="anotherServiceRegister">
             <h4>Use another service to register.</h4>
             <hr />
             @{
@@ -63,7 +75,13 @@
         </section>
     </div>
 </div>
+<script src="~/js/plugins/plugins.js"></script>
+<script src="~/js/assan.custom.js"></script>
+<!-- load cubeportfolio -->
+<script type="text/javascript" src="~/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+<!-- init cubeportfolio -->
+<script type="text/javascript" src="~/js/cube-thumb-slider.js"></script>
+@*@section Scripts {
+        <partial name="_ValidationScriptsPartial" />
 
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
+    }*@
