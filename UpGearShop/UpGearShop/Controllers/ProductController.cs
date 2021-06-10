@@ -39,7 +39,7 @@ namespace UpGearShop.Controllers
             return View(data);
         }
 
-        public async Task<ViewResult> SearchProducts(string searchCriteria)
+        public async Task<IActionResult> SearchProducts(string searchCriteria)
         {
             var data = await _productRepository.SearchProducts(searchCriteria);
             return View(data);

@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using UpGearShop.Repository;
+using UpGearShop.Areas.Identity.Data;
 
 namespace UpGearShop
 {
@@ -32,11 +33,15 @@ namespace UpGearShop
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            //services.AddDefaultIdentity<IdentityUser>()
+            //    .AddRoles<IdentityRole>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddRazorPages();
             services.AddControllersWithViews();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddRazorPages().AddRazorRuntimeCompilation();
+            services.AddCoreAdmin();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
